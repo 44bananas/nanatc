@@ -34,3 +34,10 @@ ahk
 flask
 
 datetime
+
+---------------------------------------------------------------------------------------
+know bugs:
+
+sometimes it opens a link that's not a riven and gets stuck
+
+sometimes it it reads multiple chat messages at 1 message
