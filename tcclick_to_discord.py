@@ -84,13 +84,13 @@ async def tcapi_to_discord():
                             riven_image.save("image.jpeg")
                             file = discord.File("image.jpeg", filename="image.jpeg")
                             if data[x]['user'].lower() not in str(blacklist).lower():
-                                channel = client.get_channel(1137570620712956007)
+                                channel = client.get_channel(snipe_channel_id)
                                 embed = discord.Embed(title=weapon + " " + prefix.title() + " "+price, description= "\n /w " + user + " hi could you please link " + weapon + " " + prefix + "\n\n**" + stat1 + "\n" + stat2 + "\n" + stat3 + "\n"+ neg +"**" + "\n\nMessage:\n```" + message + "```", color=discord.Color.yellow())
                                 embed.set_author(name= data[x]['user'])
                                 embed.set_image(url="attachment://image.jpeg")
                                 message = await channel.send(embed=embed, file=file)
                             else:
-                                channel = client.get_channel(1137575446448459786)
+                                channel = client.get_channel(bl_channel_id)
                                 embed = discord.Embed(title=weapon + " " + prefix.title() + " "+price, description= "\n /w " + user + " hi could you please link " + weapon + " " + prefix + "\n\n**" + stat1 + "\n" + stat2 + "\n" + stat3 + "\n"+ neg +"**" + "\n\nMessage:\n```" + message + "```", color=discord.Color.yellow())
                                 embed.set_author(name= data[x]['user'])
                                 embed.set_image(url="attachment://image.jpeg")
