@@ -153,7 +153,7 @@ def tc_scraper():
         try:
             prices = [re.sub("[\[{].*?[\]|}]", " ",i) for i in re.findall("[\[{].*?[\]|}] *\d*[.,]?\d*k?p?w?",str(chat_message).lower())]
             links = re.findall("[\[{].*?[\]|}]",str(chat_message).lower())
-            price = prices[links.index(link)]
+            price = prices[links.index(link.replace(" ","").lower())]
         except:
             price = ""
         logging.info("parse out the data")
